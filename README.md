@@ -36,19 +36,29 @@ Two things worth doing beyond filling blanks:
 2. **Write the "What I'd change" sections yourself.** They are the part of this
    site an interviewer will actually quote back at you, and they have to be true.
 
-## Publishing on GitHub Pages
+## Publishing
 
-```sh
-git init && git add -A && git commit -m "Portfolio"
-git branch -M main
-git remote add origin git@github.com:AkiraVD/portfolio.git
-git push -u origin main
-```
+The repo is private and the site should be public — GitHub Pages can't do that on
+a free account. Any of these can, from this private repo, for free:
 
-Then in the repo: **Settings → Pages → Source: Deploy from a branch → `main` / `root`**.
-This repo is `portfolio`, so it serves at `https://akiravd.github.io/portfolio/`.
-Any other repo name serves it at `https://akiravd.github.io/<repo>/` — in that case
-change the `og:url` in `index.html` and the leading-slash links in `404.html`.
+| Host | Notes |
+|---|---|
+| **Cloudflare Pages** | Recommended. Fastest, unlimited bandwidth, free custom domain. |
+| Netlify | Simplest UI, 100 GB/month free. |
+| Vercel | Fine too; the free tier is non-commercial, which a portfolio is. |
+
+Setup is the same everywhere and takes about two minutes:
+
+1. Sign in with GitHub and authorise access to `AkiraVD/portfolio`.
+2. **Framework preset: None. Build command: leave empty. Output directory: `/`.**
+   There is no build step — the repo *is* the site.
+3. Deploy. You get a public URL; the repo stays private.
+
+Then put the real URL into `og:url` in `index.html`.
+
+If you'd rather use GitHub Pages, the repo has to be public (or you need GitHub
+Pro). In that case, if the repo is not named `AkiraVD.github.io`, the site serves
+under `/portfolio/` and the home link in `404.html` needs that prefix.
 
 ## Checking it locally
 

@@ -84,9 +84,15 @@ column at 760–860px breakpoints.
 
 ## Deploying
 
-Pushing to `main` publishes it: **Settings → Pages → Deploy from a branch →
-`main` / root**. Because the repo is `portfolio` rather than `AkiraVD.github.io`,
-the site lives under `/portfolio/`. Two absolute paths depend on that — the
-stylesheet link and the home link in `404.html`, plus `og:url` in `index.html`.
-If the repo is ever renamed, those three need updating; everything else is
-relative.
+The repo is **private** and the site is meant to be **public**, which GitHub Pages
+cannot do on a free account. It is deployed instead from a host that builds from a
+private repo and serves a public site — Cloudflare Pages, Netlify or Vercel, all
+free for this. There is no build command; the publish directory is the repo root.
+
+Every one of those serves at the **root** of a domain, so all paths in the site
+are either relative or root-absolute. `404.html` carries its own inlined styles so
+it renders at any depth without a stylesheet path to get wrong. Don't reintroduce
+a `/<repo>/` prefix unless the site actually moves to GitHub Pages under a subpath.
+
+`og:url` in `index.html` is a `[YOUR SITE URL]` placeholder until the final domain
+is known.

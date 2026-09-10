@@ -8,13 +8,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Karla:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/portfolio/style.css">
+<style>
+  /* Inlined so this page renders at any depth, on any host, with no path to get wrong. */
+  :root { --paper:#faf8f4; --ink:#1c1917; --muted:#6f665d; --accent:oklch(0.52 0.13 45); }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper:#14120f; --ink:#ece7df; --muted:#9a9086; --accent:oklch(0.74 0.12 58); }
+  }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font-family:"Karla","Helvetica Neue",system-ui,sans-serif; }
+  a { color:var(--accent); text-decoration:none; }
+  main { max-width:1040px; margin-inline:auto; padding-inline:clamp(20px,5vw,56px); }
+  h1 { font-family:"Newsreader",Georgia,serif; font-weight:400; letter-spacing:-0.02em; margin:0; }
+</style>
 </head>
 <body>
-<main id="main" class="wrap" style="min-height:70vh; display:flex; flex-direction:column; justify-content:center; gap:20px; padding-block:80px;">
+<main id="main" style="min-height:70vh; display:flex; flex-direction:column; justify-content:center; gap:20px; padding-block:80px;">
   <h1 class="serif" style="font-size:clamp(38px,7vw,64px); line-height:1.05;">That page isn&rsquo;t here.</h1>
   <p style="color:var(--muted); font-size:18px; max-width:44ch;">The link may be out of date, or I may have moved something. The work is all still on the front page.</p>
-  <p><a href="/portfolio/" style="font-size:17px; font-weight:500;">&larr; Back to the front page</a></p>
+  <p><a href="/" style="font-size:17px; font-weight:500;">&larr; Back to the front page</a></p>
 </main>
 </body>
 </html>
