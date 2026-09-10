@@ -7,7 +7,7 @@ Guidance for Claude Code working in this repository.
 AkiraVD's personal portfolio, built to get hired. Static HTML and one stylesheet —
 **no build step, no framework, no JavaScript, no dependencies.** Open `index.html`
 in a browser and it works. Published on GitHub Pages at
-<https://akiravd.github.io/portfolio/>.
+<https://akiravd.github.io/>.
 
 ```
 index.html          front page: hero, measured numbers, work list, experience
@@ -90,15 +90,14 @@ google-chrome --headless --disable-gpu --hide-scrollbars --window-size=400,2600 
 
 ## Deploying
 
-The repo is **private** and the site is meant to be **public**, which GitHub Pages
-cannot do on a free account. It is deployed instead from a host that builds from a
-private repo and serves a public site — Cloudflare Pages, Netlify or Vercel, all
-free for this. There is no build command; the publish directory is the repo root.
+The repo is **public** and named `AkiraVD.github.io`, so GitHub Pages serves it as
+a user site at the **root** of <https://akiravd.github.io/> — not under a
+`/<repo>/` subpath. The source is the `main` branch, folder `/ (root)`. There is no
+build command and no `CNAME`; a `CNAME` is only needed if a custom domain is added
+later.
 
-Every one of those serves at the **root** of a domain, so all paths in the site
-are either relative or root-absolute. `404.html` carries its own inlined styles so
-it renders at any depth without a stylesheet path to get wrong. Don't reintroduce
-a `/<repo>/` prefix unless the site actually moves to GitHub Pages under a subpath.
-
-`og:url` in `index.html` is a `[YOUR SITE URL]` placeholder until the final domain
-is known.
+Because it serves at a domain root, all paths in the site are either relative or
+root-absolute. `404.html` carries its own inlined styles so it renders at any depth
+without a stylesheet path to get wrong. Don't reintroduce a `/<repo>/` prefix — it
+would break every link. If the repo is ever renamed away from `AkiraVD.github.io`,
+the site drops to a subpath and this all has to be revisited.
