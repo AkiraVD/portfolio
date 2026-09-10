@@ -87,9 +87,11 @@ $ cd ../<next>                      next project, then the email
 Spec rows are mono key/value pairs in snake_case (`built_with`, `verified_on`,
 `source`) — they read as output, not as a printed table.
 
-Keep **"What I'd change"** on every page. It's the section an interviewer quotes
-back, and it must be the user's own honest words — leave the placeholder until
-they write it rather than filling it in for them.
+**"What I'd change" is currently absent from every page.** It used to sit before
+the `cd ../` line as a bracketed placeholder; the placeholders were removed rather
+than shipped visible. The section should come back once the user writes it — it's
+the one an interviewer quotes back. It must be their own honest words: never
+draft it for them, and never reinstate a placeholder in its place.
 
 To add a project: copy `projects/todo.html`, replace the content, add an
 `.ls-item` row to `index.html`, and point the previous page's `cd ../` link at it.
