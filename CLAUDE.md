@@ -26,9 +26,15 @@ analytics. Fast first paint and crawlable HTML are the point — an SPA would co
 both, and would argue against what the site is selling.
 
 **Every claim is a measurement.** The site's whole thesis is measured numbers
-rather than adjectives ("49.9 MB with eight tabs open", "microseconds per spin").
+rather than adjectives ("49.9 MB with eight tabs open", "microseconds, not
+milliseconds").
 Never add a performance claim without a real number behind it, and never invent
 one. If a number isn't verified, leave it out.
+
+**Keep employer internals out.** The experience section deliberately describes
+achievements without naming the employer's architecture, data model or domain
+vocabulary. Keep it that way: say "a hot-path lookup", not the internal name for
+it. Scale numbers and outcomes are fine; internal design detail is not.
 
 **Never invent biography.** Job titles, dates, companies, cities and contact
 details come from the user, not from inference. Placeholders are written in

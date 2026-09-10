@@ -71,12 +71,12 @@
         <p>My terminal with eight tabs open. VS Code&rsquo;s main process alone, same machine: 115&nbsp;MB.</p>
       </div>
       <div class="stat">
-        <b>39 <span>slot titles</span></b>
-        <p>Live on one shared Node.js game framework, alongside fish-shooting, card and casual multiplayer games.</p>
+        <b>39 <span>game titles</span></b>
+        <p>Live on one shared Node.js game framework &mdash; slots, fish shooting, card and casual multiplayer.</p>
       </div>
       <div class="stat">
-        <b>&micro;s <span>per spin</span></b>
-        <p>Reel lookup after I moved read-only game data out of MySQL stored procedures and into a local SQLite file &mdash; down from milliseconds.</p>
+        <b>&micro;s <span>not ms</span></b>
+        <p>A hot-path lookup, after moving read-only reference data out of the database and into a local embedded store.</p>
       </div>
     </div>
   </section>
@@ -154,9 +154,9 @@
               <h3>[JOB TITLE] &middot; [COMPANY]</h3>
               <p>Realtime backends for online casino and arcade games &mdash; slots, fish shooting, card games and casual multiplayer &mdash; on a shared Node.js framework serving raw TCP, WebSocket and WSS from one clustered process per game.</p>
               <ul class="role-points">
-                <li>Cut per-spin reel lookup from milliseconds to tens of microseconds, moving read-only game data out of MySQL stored procedures into a local SQLite file. The database is generated from the live schema rather than hand-written, so it can be rebuilt instead of maintained.</li>
-                <li>Built RTP validation that simulates millions of spins per title and reports to Google Sheets, so game maths is signed off on evidence rather than intuition.</li>
-                <li>Kept game code contained: the server statically scans every game module at boot and refuses to start if one reaches outside its own directory.</li>
+                <li>Cut a hot-path lookup from milliseconds to tens of microseconds by moving read-only reference data out of the database into a local embedded store &mdash; generated from the live schema, so it is rebuilt rather than maintained by hand.</li>
+                <li>Built simulation tooling that validates game maths over millions of runs and reports automatically, so releases are signed off on evidence rather than intuition.</li>
+                <li>Kept per-title modules contained: the server statically scans each one at boot and refuses to start if it reaches outside its own directory.</li>
                 <li>Held a production runtime pinned to Node 12 for years, with the dependency tree documented well enough that no upgrade has silently broken a live server.</li>
               </ul>
             </div>
