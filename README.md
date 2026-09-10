@@ -16,23 +16,14 @@ img/*.png           screenshots, downsampled to 1400px / ~40KB each
 .nojekyll           stop Pages running Jekyll over it
 ```
 
-## Before this goes live
+## Status
 
-Everything in `[SQUARE BRACKETS]` is a placeholder that needs a real value.
-Find them all with:
+Nothing is outstanding — no placeholders remain. If you add copy later, keep
+anything unfinished in `[SQUARE BRACKETS]` and find it again with:
 
 ```sh
 grep -rn '\[[A-Z]' --include='*.html' index.html projects/
 ```
-
-Four are left, all the same one:
-
-| Where | What's needed |
-|---|---|
-| every `projects/*.html` | The "What I'd change" paragraph |
-
-**Write those yourself.** They are the part of this site an interviewer will
-actually quote back at you, and they have to be true.
 
 ## Publishing
 

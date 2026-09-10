@@ -1,8 +1,8 @@
 /* ------------------------------------------------------------------
-   terminal.css — front page only, for now.
-   The four project pages still use style.css; when they are converted
-   these two merge and style.css goes away.
+   terminal.css — the whole site: front page, project pages, and the
+   vocabulary 404.html re-inlines for itself.
    Single-look design: this is a terminal, and a terminal is dark.
+   There is no light-mode block, and adding one would be a mistake.
    ------------------------------------------------------------------ */
 
 :root {
@@ -309,7 +309,6 @@ figcaption {
   margin: 0;
   text-wrap: pretty;
 }
-.todo-note { color: var(--faint); border-left: 2px solid var(--dim); padding-left: 14px; }
 
 code {
   color: var(--accent);

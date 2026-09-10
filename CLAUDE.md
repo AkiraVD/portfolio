@@ -80,18 +80,14 @@ $ cat <name>/README.md              title, lede, spec table, optional screenshot
 $ cat <name>/problem.md             one paragraph
 $ cat <name>/decisions.md           3–4 short items, each an "## " heading
 $ cat <name>/measured.txt           optional table
-$ cat <name>/what-id-change.md      the placeholder
 $ cd ../<next>                      next project, then the email
 ```
 
 Spec rows are mono key/value pairs in snake_case (`built_with`, `verified_on`,
 `source`) — they read as output, not as a printed table.
 
-**"What I'd change" is currently absent from every page.** It used to sit before
-the `cd ../` line as a bracketed placeholder; the placeholders were removed rather
-than shipped visible. The section should come back once the user writes it — it's
-the one an interviewer quotes back. It must be their own honest words: never
-draft it for them, and never reinstate a placeholder in its place.
+There is deliberately no "What I'd change" section. It existed as a bracketed
+placeholder, was never written, and has been dropped. Don't reintroduce it.
 
 To add a project: copy `projects/todo.html`, replace the content, add an
 `.ls-item` row to `index.html`, and point the previous page's `cd ../` link at it.
