@@ -79,8 +79,14 @@ it. There is no index to regenerate.
 python3 -m http.server 8000     # then open http://localhost:8000
 ```
 
-Check it at phone width (~400px) before pushing — the layout collapses to one
-column at 760–860px breakpoints.
+Check it at phone width before pushing — the layout collapses to one column at
+760–860px breakpoints. Headless Chrome renders a page to PNG at any width without
+touching a live browser session, which is the quickest way to actually look:
+
+```sh
+google-chrome --headless --disable-gpu --hide-scrollbars --window-size=400,2600 \
+  --screenshot=/tmp/phone.png http://127.0.0.1:8000/
+```
 
 ## Deploying
 

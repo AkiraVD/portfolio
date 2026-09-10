@@ -259,6 +259,14 @@ figure { margin: 0 auto clamp(36px, 5vw, 64px); max-width: 920px; }
 .shot { display: block; width: 100%; height: auto; border-radius: 2px; }
 figcaption { margin-top: 12px; font-size: 13px; color: var(--faint); }
 
+/* On a phone, a dense UI screenshot scaled to ~370px is unreadable. Keep it at
+   natural size and let the frame scroll sideways instead — same bargain as the
+   wide tables. */
+@media (max-width: 720px) {
+  .frame { overflow-x: auto; justify-content: flex-start; }
+  .shot { width: auto; max-width: none; }
+}
+
 .prose { display: flex; flex-direction: column; gap: 18px; }
 .prose p { font-size: 17px; line-height: 1.72; color: var(--body); }
 
