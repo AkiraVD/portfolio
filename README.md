@@ -3,12 +3,16 @@
 Personal portfolio. Static HTML and one stylesheet — no build step, no framework,
 no JavaScript. Open `index.html` in a browser and it works.
 
+Every page is styled as a single terminal window: prompt lines as section
+headings, output indented beneath, ASCII rules between sections. Dark only — a
+terminal that turns beige isn't a terminal.
+
 ```
 index.html          front page
-style.css           the whole design system (light + dark)
+terminal.css        the whole design system (dark only)
 projects/*.html     one page per project
 img/*.png           screenshots, downsampled to 1400px / ~40KB each
-404.html            served by GitHub Pages on a bad link
+404.html            served by GitHub Pages on a bad link; styles inlined
 .nojekyll           stop Pages running Jekyll over it
 ```
 
@@ -21,41 +25,26 @@ Find them all with:
 grep -rn '\[[A-Z]' --include='*.html' index.html projects/
 ```
 
+Four are left, all the same one:
+
 | Where | What's needed |
 |---|---|
-| `index.html` hero card | City, remote/hybrid, the roles you want |
-| `index.html` experience | Two real jobs: title, company, dates, one measurable outcome each |
-| `index.html` footer | Email, LinkedIn URL, CV PDF |
 | every `projects/*.html` | The "What I'd change" paragraph |
 
-One thing worth doing beyond filling blanks:
-
-1. **Write the "What I'd change" sections yourself.** They are the part of this
-   site an interviewer will actually quote back at you, and they have to be true.
+**Write those yourself.** They are the part of this site an interviewer will
+actually quote back at you, and they have to be true.
 
 ## Publishing
 
-The repo is private and the site should be public — GitHub Pages can't do that on
-a free account. Any of these can, from this private repo, for free:
+The repo is public and named `AkiraVD.github.io`, so GitHub Pages serves it as a
+user site at the root of <https://akiravd.github.io/> — not under a `/<repo>/`
+subpath. Source is the `main` branch, folder `/ (root)`. There is no build
+command and no `CNAME`; a `CNAME` is only needed for a custom domain.
 
-| Host | Notes |
-|---|---|
-| **Cloudflare Pages** | Recommended. Fastest, unlimited bandwidth, free custom domain. |
-| Netlify | Simplest UI, 100 GB/month free. |
-| Vercel | Fine too; the free tier is non-commercial, which a portfolio is. |
-
-Setup is the same everywhere and takes about two minutes:
-
-1. Sign in with GitHub and authorise access to `AkiraVD/portfolio`.
-2. **Framework preset: None. Build command: leave empty. Output directory: `/`.**
-   There is no build step — the repo *is* the site.
-3. Deploy. You get a public URL; the repo stays private.
-
-Then put the real URL into `og:url` in `index.html`.
-
-If you'd rather use GitHub Pages, the repo has to be public (or you need GitHub
-Pro). In that case, if the repo is not named `AkiraVD.github.io`, the site serves
-under `/portfolio/` and the home link in `404.html` needs that prefix.
+Because it serves at a domain root, paths in the site are relative or
+root-absolute. Don't reintroduce a `/<repo>/` prefix — it would break every
+link. Renaming the repo away from `AkiraVD.github.io` drops the site to a subpath
+and breaks it.
 
 ## Checking it locally
 
@@ -63,12 +52,14 @@ under `/portfolio/` and the home link in `404.html` needs that prefix.
 python3 -m http.server -d . 8000    # then open http://localhost:8000
 ```
 
+Check phone width before pushing — one column below 820px, tighter below 520px.
+
 ## Editing it
 
-Colours, spacing and type live as custom properties at the top of `style.css`.
-Dark mode is a second block of the same properties under
-`@media (prefers-color-scheme: dark)` — change a value once and it applies to
-both the front page and every project page.
+Colours, spacing and type live as custom properties at the top of `terminal.css`,
+and apply to the front page and every project page. There is no light-mode block
+to keep in sync.
 
-To add a project: copy `projects/todo.html`, replace the content, and add a
-`.work-item` block to `index.html`. There is no index to regenerate.
+To add a project: copy `projects/todo.html`, replace the content, add an
+`.ls-item` row to `index.html`, and point the previous page's `cd ../` link at it.
+There is no index to regenerate.

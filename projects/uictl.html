@@ -4,61 +4,58 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>uictl — AkiraVD</title>
-<meta name="description" content="Desktop automation for Wayland: virtual input devices, the accessibility bus, and portal-based screen capture, exposed over MCP.">
-<meta name="color-scheme" content="light dark">
+<meta name="description" content="Drive Linux desktop apps from a shell, from Python, or from an AI agent. Built for Wayland, where the old X11 automation tools stopped working.">
+<meta name="color-scheme" content="dark">
 <meta property="og:type" content="article">
 <meta property="og:title" content="uictl — AkiraVD">
-<meta property="og:description" content="Desktop automation for Wayland: virtual input devices, the accessibility bus, and portal-based screen capture, exposed over MCP.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231c1917'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23faf8f4' text-anchor='middle'>A</text></svg>">
+<meta property="og:description" content="Drive Linux desktop apps from a shell, from Python, or from an AI agent. Built for Wayland, where the old X11 automation tools stopped working.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0f0e'/><text x='16' y='23' font-family='monospace' font-size='20' fill='%236ab98a' text-anchor='middle'>$</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Karla:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../terminal.css">
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-head">
-  <div class="wrap">
-    <div class="brand"><a class="name" href="../index.html" style="color:var(--ink)">AkiraVD</a></div>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="../index.html#work">Work</a>
-      <a class="strong" href="https://github.com/AkiraVD" rel="me noopener">GitHub</a>
-    </nav>
-  </div>
-</header>
-<main id="main">
-  <section class="proj-head">
-    <div class="wrap">
-      <a class="back" href="../index.html#work">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg>
-        All work</a>
-      <div class="split" style="margin-top:34px;">
-        <div>
-          <h1>uictl</h1>
-          <p class="lede">Drive Linux desktop apps — click, type, look at the screen — from a shell, from Python, or from an AI agent. Built for Wayland, where the old tools stopped working.</p>
-        </div>
-        <div class="table-scroll"><table class="spec"><tbody>
-          <tr><th scope="row">Role</th><td>Sole designer and engineer</td></tr>
-          <tr><th scope="row">Built with</th><td>Python 3.12, PyGObject, D-Bus, GStreamer</td></tr>
-          <tr><th scope="row">Verified on</th><td>Ubuntu 24.04, GNOME 46, Wayland</td></tr>
-          <tr><th scope="row">Source</th><td><a href="https://github.com/AkiraVD/ui-control" rel="noopener">github.com/AkiraVD &rarr;</a></td></tr>
-        </tbody></table></div>
-      </div>
-    </div>
-  </section>
 
-  <section class="section" style="padding-top:0;">
-    <div class="wrap split">
-      <h2>The problem</h2>
-      <div class="prose">
-        <p>Wayland deliberately blocks the tricks X11 automation relied on: <code>xdotool</code> only sees XWayland clients, and GNOME&nbsp;46 refuses the old screenshot D-Bus method outright. The usual fallback is pixel coordinates, which break the moment a theme or a window position changes.</p>
-      </div>
-    </div>
-  </section>
+<div class="win">
 
-  <section class="section" style="padding-top:0;">
-    <div class="wrap split">
-      <h2>Three mechanisms, chosen deliberately</h2>
+  <header class="win-bar">
+    <span class="dots" aria-hidden="true"><span></span><span></span><span></span></span>
+    <span class="win-title">akiravd@hcm &mdash; projects/uictl</span>
+  </header>
+
+  <main class="win-body" id="main">
+
+    <p class="cmd"><a class="back" href="../index.html">cd ~</a></p>
+
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cat uictl/README.md</p>
+    <div class="out">
+      <h1 class="proj-title"># uictl</h1>
+      <p class="proj-lede">Drive Linux desktop apps &mdash; click, type, look at the screen &mdash; from a shell, from Python, or from an AI agent. Built for Wayland, where the old tools stopped working.</p>
+      <div class="table-scroll"><table class="spec"><tbody>
+        <tr><th scope="row">role</th><td>Sole designer and engineer</td></tr>
+        <tr><th scope="row">built_with</th><td>Python 3.12, PyGObject, D-Bus, GStreamer</td></tr>
+        <tr><th scope="row">verified_on</th><td>Ubuntu 24.04, GNOME 46, Wayland</td></tr>
+        <tr><th scope="row">source</th><td><a href="https://github.com/AkiraVD/ui-control" rel="noopener">github.com/AkiraVD/ui-control</a></td></tr>
+      </tbody></table></div>
+    </div>
+
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cat uictl/problem.md</p>
+    <div class="out prose">
+      <h2 class="proj-title" style="font-size:15px;">## The problem</h2>
+      <p style="margin-top:12px;">Wayland deliberately blocks the tricks X11 automation relied on: <code>xdotool</code> only sees XWayland clients, and GNOME&nbsp;46 refuses the old screenshot D-Bus method outright. The usual fallback is pixel coordinates, which break the moment a theme or a window position changes.</p>
+    </div>
+
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cat uictl/decisions.md</p>
+    <div class="out">
       <div class="decisions">
         <div class="decision">
           <h3>Input goes in below the display server</h3>
@@ -78,33 +75,39 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="section" style="padding-top:0;">
-    <div class="wrap split">
-      <h2>Measured</h2>
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cat uictl/measured.txt</p>
+    <div class="out">
       <div class="table-scroll"><table class="spec"><tbody>
-        <tr><th scope="row">Screenshot, cold</th><td>0.2&nbsp;s</td></tr>
-        <tr><th scope="row">Screenshot, warm</th><td>0.01&ndash;0.05&nbsp;s with a session held open</td></tr>
-        <tr><th scope="row">Virtual device creation</th><td>~0.25&nbsp;s</td></tr>
-        <tr><th scope="row">Machine</th><td>Intel i5-12400, 16&nbsp;GB, Ubuntu 24.04.5, GNOME 46</td></tr>
-        <tr><th scope="row">Exposed to agents</th><td>14 MCP tools</td></tr>
+        <tr><th scope="row">screenshot, cold</th><td>0.2&nbsp;s</td></tr>
+        <tr><th scope="row">screenshot, warm</th><td>0.01&ndash;0.05&nbsp;s with a session held open</td></tr>
+        <tr><th scope="row">virtual device creation</th><td>~0.25&nbsp;s</td></tr>
+        <tr><th scope="row">machine</th><td>Intel i5-12400, 16&nbsp;GB, Ubuntu 24.04.5, GNOME 46</td></tr>
+        <tr><th scope="row">exposed to agents</th><td>14 MCP tools</td></tr>
       </tbody></table></div>
     </div>
-  </section>
 
-  <section class="section" style="padding-top:0;">
-    <div class="wrap split">
-      <h2>What I&rsquo;d change</h2>
-      <div class="prose"><p class="todo-note">[A limitation and how you&rsquo;d address it &mdash; the Wayland &ldquo;position unknown&rdquo; caveat and multi-monitor handling are honest candidates.]</p></div>
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cat uictl/what-id-change.md</p>
+    <div class="out prose">
+      <p class="todo-note">[A limitation and how you&rsquo;d address it &mdash; the Wayland &ldquo;position unknown&rdquo; caveat and multi-monitor handling are honest candidates.]</p>
     </div>
-  </section>
-</main>
-<footer class="next-foot">
-  <div class="wrap">
-    <a class="next" href="smt.html">Next: simple-multi-terminal &rarr;</a>
-    <a href="mailto:ledanhphuong@gmail.com" style="font-size:16px;font-weight:500;">ledanhphuong@gmail.com</a>
-  </div>
-</footer>
+
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cd ../simple-multi-terminal</p>
+    <div class="out nav-next">
+      <p><a href="smt.html">next: simple-multi-terminal &rarr;</a></p>
+      <p style="margin-top:10px;"><a href="mailto:ledanhphuong@gmail.com">ledanhphuong@gmail.com</a></p>
+    </div>
+
+    <p class="prompt-end" aria-hidden="true">$<span class="cursor"></span></p>
+
+  </main>
+</div>
+
 </body>
 </html>

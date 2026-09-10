@@ -5,67 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>lst — AkiraVD</title>
 <meta name="description" content="A lightweight API and socket testing tool in Go: HTTP, WebSocket, raw TCP and gRPC, with a workspace of plain YAML files.">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="dark">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lst — AkiraVD">
 <meta property="og:description" content="A lightweight API and socket testing tool in Go: HTTP, WebSocket, raw TCP and gRPC, with a workspace of plain YAML files.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231c1917'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23faf8f4' text-anchor='middle'>A</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0f0e'/><text x='16' y='23' font-family='monospace' font-size='20' fill='%236ab98a' text-anchor='middle'>$</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Karla:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../terminal.css">
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-head">
-  <div class="wrap">
-    <div class="brand"><a class="name" href="../index.html" style="color:var(--ink)">AkiraVD</a></div>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="../index.html#work">Work</a>
-      <a class="strong" href="https://github.com/AkiraVD" rel="me noopener">GitHub</a>
-    </nav>
-  </div>
-</header>
-<main id="main">
-  <section class="proj-head">
-    <div class="wrap">
-      <a class="back" href="../index.html#work">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg>
-        All work</a>
-      <div class="split" style="margin-top:34px;">
-        <div>
-          <h1>lst</h1>
-          <p class="lede">An API and socket testing tool. Four protocols, Postman-compatible scripting, and a workspace of plain files you can commit to git.</p>
-        </div>
-        <div class="table-scroll"><table class="spec"><tbody>
-          <tr><th scope="row">Role</th><td>Sole designer and engineer</td></tr>
-          <tr><th scope="row">Built with</th><td>Go 1.25, embedded web UI</td></tr>
-          <tr><th scope="row">Protocols</th><td>HTTP, WebSocket, raw TCP, gRPC</td></tr>
-          <tr><th scope="row">Source</th><td><a href="https://github.com/AkiraVD/lightweight-api-test-tool" rel="noopener">github.com/AkiraVD &rarr;</a></td></tr>
-        </tbody></table></div>
-      </div>
+
+<div class="win">
+
+  <header class="win-bar">
+    <span class="dots" aria-hidden="true"><span></span><span></span><span></span></span>
+    <span class="win-title">akiravd@hcm &mdash; projects/lst</span>
+  </header>
+
+  <main class="win-body" id="main">
+
+    <p class="cmd"><a class="back" href="../index.html">cd ~</a></p>
+
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cat lst/README.md</p>
+    <div class="out">
+      <h1 class="proj-title"># lst</h1>
+      <p class="proj-lede">An API and socket testing tool. Four protocols, Postman-compatible scripting, and a workspace of plain files you can commit to git.</p>
+      <div class="table-scroll"><table class="spec"><tbody>
+        <tr><th scope="row">role</th><td>Sole designer and engineer</td></tr>
+        <tr><th scope="row">built_with</th><td>Go 1.25, embedded web UI</td></tr>
+        <tr><th scope="row">protocols</th><td>HTTP, WebSocket, raw TCP, gRPC</td></tr>
+        <tr><th scope="row">source</th><td><a href="https://github.com/AkiraVD/lightweight-api-test-tool" rel="noopener">github.com/AkiraVD/lightweight-api-test-tool</a></td></tr>
+      </tbody></table></div>
+      <figure>
+        <div class="frame"><img src="../img/lst.png" width="910" height="218" alt="A POST request in lst. The URL reads baseUrl slash api slash apiVersion slash login, and the JSON body contains username and password — each variable coloured by the scope it resolves from."></div>
+        <figcaption>Every <code>{{variable}}</code> is coloured by the scope it resolves from. Red means nothing defines it yet.</figcaption>
+      </figure>
     </div>
-  </section>
 
-  <div class="wrap">
-    <figure>
-      <div class="frame"><img class="shot" src="../img/lst.png" width="910" height="218" alt="A POST request in lst. The URL reads baseUrl slash api slash apiVersion slash login, and the JSON body contains username and password — each variable coloured by the scope it resolves from."></div>
-      <figcaption>Every <code>{{variable}}</code> is coloured by the scope it resolves from. Red means nothing defines it yet.</figcaption>
-    </figure>
-  </div>
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
 
-  <section class="section" style="padding-top:0;">
-    <div class="wrap split">
-      <h2>The problem</h2>
-      <div class="prose">
-        <p>API clients have grown into accounts, sync services and AI panels, while the actual job &mdash; send a request, capture a token, assert on the response &mdash; hasn&rsquo;t changed. And more of that job now happens over WebSocket or gRPC, in tools that only really speak HTTP.</p>
-      </div>
+    <p class="cmd">cat lst/problem.md</p>
+    <div class="out prose">
+      <h2 class="proj-title" style="font-size:15px;">## The problem</h2>
+      <p style="margin-top:12px;">API clients have grown into accounts, sync services and AI panels, while the actual job &mdash; send a request, capture a token, assert on the response &mdash; hasn&rsquo;t changed. And more of that job now happens over WebSocket or gRPC, in tools that only really speak HTTP.</p>
     </div>
-  </section>
 
-  <section class="section" style="padding-top:0;">
-    <div class="wrap split">
-      <h2>Decisions worth defending</h2>
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cat lst/decisions.md</p>
+    <div class="out">
       <div class="decisions">
         <div class="decision">
           <h3>Borrow the scripting model, don&rsquo;t invent one</h3>
@@ -85,20 +79,26 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="section" style="padding-top:0;">
-    <div class="wrap split">
-      <h2>What I&rsquo;d change</h2>
-      <div class="prose"><p class="todo-note">[A limitation you know about, and how you&rsquo;d address it. Keep this section &mdash; it&rsquo;s the part an interviewer will quote back at you.]</p></div>
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cat lst/what-id-change.md</p>
+    <div class="out prose">
+      <p class="todo-note">[A limitation you know about, and how you&rsquo;d address it. Keep this section &mdash; it&rsquo;s the part an interviewer will quote back at you.]</p>
     </div>
-  </section>
-</main>
-<footer class="next-foot">
-  <div class="wrap">
-    <a class="next" href="uictl.html">Next: uictl &rarr;</a>
-    <a href="mailto:ledanhphuong@gmail.com" style="font-size:16px;font-weight:500;">ledanhphuong@gmail.com</a>
-  </div>
-</footer>
+
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cd ../uictl</p>
+    <div class="out nav-next">
+      <p><a href="uictl.html">next: uictl &rarr;</a></p>
+      <p style="margin-top:10px;"><a href="mailto:ledanhphuong@gmail.com">ledanhphuong@gmail.com</a></p>
+    </div>
+
+    <p class="prompt-end" aria-hidden="true">$<span class="cursor"></span></p>
+
+  </main>
+</div>
+
 </body>
 </html>

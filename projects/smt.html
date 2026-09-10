@@ -4,68 +4,62 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>simple-multi-terminal — AkiraVD</title>
-<meta name="description" content="A GTK4/VTE terminal that does five things and refuses the rest — 49.9 MB with eight tabs open, measured as PSS.">
-<meta name="color-scheme" content="light dark">
+<meta name="description" content="A GTK4 terminal that does five things and nothing else — 49.9 MB with eight tabs open.">
+<meta name="color-scheme" content="dark">
 <meta property="og:type" content="article">
 <meta property="og:title" content="simple-multi-terminal — AkiraVD">
-<meta property="og:description" content="A GTK4/VTE terminal that does five things and refuses the rest — 49.9 MB with eight tabs open, measured as PSS.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231c1917'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23faf8f4' text-anchor='middle'>A</text></svg>">
+<meta property="og:description" content="A GTK4 terminal that does five things and nothing else — 49.9 MB with eight tabs open.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0f0e'/><text x='16' y='23' font-family='monospace' font-size='20' fill='%236ab98a' text-anchor='middle'>$</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Karla:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../terminal.css">
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-head">
-  <div class="wrap">
-    <div class="brand"><a class="name" href="../index.html" style="color:var(--ink)">AkiraVD</a></div>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="../index.html#work">Work</a>
-      <a class="strong" href="https://github.com/AkiraVD" rel="me noopener">GitHub</a>
-    </nav>
-  </div>
-</header>
-<main id="main">
-  <section class="proj-head">
-    <div class="wrap">
-      <a class="back" href="../index.html#work">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg>
-        All work</a>
-      <div class="split" style="margin-top:34px;">
-        <div>
-          <h1>simple-multi-terminal</h1>
-          <p class="lede">A terminal that does five things and nothing else: tabs, splits, rename, persistent paths, and a dot that tells you which tab wants you.</p>
-        </div>
-        <div class="table-scroll"><table class="spec"><tbody>
-          <tr><th scope="row">Role</th><td>Sole designer and engineer</td></tr>
-          <tr><th scope="row">Built with</th><td>Python, GTK4, VTE, libadwaita</td></tr>
-          <tr><th scope="row">Platforms</th><td>Linux and macOS</td></tr>
-          <tr><th scope="row">Source</th><td><a href="https://github.com/AkiraVD/simple-multi-terminal" rel="noopener">github.com/AkiraVD &rarr;</a></td></tr>
-        </tbody></table></div>
-      </div>
+
+<div class="win">
+
+  <header class="win-bar">
+    <span class="dots" aria-hidden="true"><span></span><span></span><span></span></span>
+    <span class="win-title">akiravd@hcm &mdash; projects/simple-multi-terminal</span>
+  </header>
+
+  <main class="win-body" id="main">
+
+    <p class="cmd"><a class="back" href="../index.html">cd ~</a></p>
+
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cat simple-multi-terminal/README.md</p>
+    <div class="out">
+      <h1 class="proj-title"># simple-multi-terminal</h1>
+      <p class="proj-lede">A terminal that does five things and nothing else: tabs, splits, rename, persistent paths, and a dot that tells you which tab wants you.</p>
+      <div class="table-scroll"><table class="spec"><tbody>
+        <tr><th scope="row">role</th><td>Sole designer and engineer</td></tr>
+        <tr><th scope="row">built_with</th><td>Python, GTK4, VTE, libadwaita</td></tr>
+        <tr><th scope="row">platforms</th><td>Linux and macOS</td></tr>
+        <tr><th scope="row">source</th><td><a href="https://github.com/AkiraVD/simple-multi-terminal" rel="noopener">github.com/AkiraVD/simple-multi-terminal</a></td></tr>
+      </tbody></table></div>
+      <figure>
+        <div class="frame"><img src="../img/smt.png" width="1400" height="700" alt="The terminal with three tabs named api, web and dotfiles. The api tab carries a yellow dot; the web tab shows a finished vite build."></div>
+        <figcaption>The yellow dot on <code>api</code> is a job asking for something while you work in <code>web</code>.</figcaption>
+      </figure>
     </div>
-  </section>
 
-  <div class="wrap">
-    <figure>
-      <div class="frame"><img class="shot" src="../img/smt.png" width="1400" height="700" alt="The terminal with three tabs named api, web and dotfiles. The api tab carries a yellow dot; the web tab shows a finished vite build."></div>
-      <figcaption>The yellow dot on <code>api</code> is a job asking for something while you work in <code>web</code>.</figcaption>
-    </figure>
-  </div>
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
 
-  <section class="section" style="padding-top:0;">
-    <div class="wrap split">
-      <h2>The problem</h2>
-      <div class="prose">
-        <p>Running long jobs in several tabs means constantly checking tabs that have nothing to say. The thing you actually want to know &mdash; which tab needs me, which one failed &mdash; is the one thing a terminal doesn&rsquo;t tell you.</p>
-      </div>
+    <p class="cmd">cat simple-multi-terminal/problem.md</p>
+    <div class="out prose">
+      <h2 class="proj-title" style="font-size:15px;">## The problem</h2>
+      <p style="margin-top:12px;">Running long jobs in several tabs means constantly checking tabs that have nothing to say. The thing you actually want to know &mdash; which tab needs me, which one failed &mdash; is the one thing a terminal doesn&rsquo;t tell you.</p>
     </div>
-  </section>
 
-  <section class="section" style="padding-top:0;">
-    <div class="wrap split">
-      <h2>Decisions worth defending</h2>
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cat simple-multi-terminal/decisions.md</p>
+    <div class="out">
       <div class="decisions">
         <div class="decision">
           <h3>A dot, not a spinner &mdash; because the spinner was measured</h3>
@@ -73,7 +67,7 @@
         </div>
         <div class="decision">
           <h3>Two signals that usefully disagree</h3>
-          <p>The shell marks a command running at <code>preexec</code> &mdash; one <code>printf</code>, measured at 12&nbsp;µs against the ~246&nbsp;µs a forked helper costs. Agent hooks mark the finer state inside a long session that the shell sees as one command.</p>
+          <p>The shell marks a command running at <code>preexec</code> &mdash; one <code>printf</code>, measured at 12&nbsp;&micro;s against the ~246&nbsp;&micro;s a forked helper costs. Agent hooks mark the finer state inside a long session that the shell sees as one command.</p>
         </div>
         <div class="decision">
           <h3>A precedence rule, so a tab is never ambiguous</h3>
@@ -85,32 +79,38 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="section" style="padding-top:0;">
-    <div class="wrap split">
-      <h2>Measured</h2>
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cat simple-multi-terminal/measured.txt</p>
+    <div class="out">
       <div class="table-scroll"><table class="spec"><tbody>
-        <tr><th scope="row">Eight tabs open</th><td>49.9&nbsp;MB total PSS, including the eight bash processes</td></tr>
-        <tr><th scope="row">For scale</th><td>VS Code&rsquo;s main process alone: 115&nbsp;MB, same machine</td></tr>
-        <tr><th scope="row">Status dot</th><td>0.0&ndash;0.2% of a core, against ~5% for a spinner</td></tr>
-        <tr><th scope="row">Shell notification</th><td>12&nbsp;µs per command, against ~246&nbsp;µs forked</td></tr>
+        <tr><th scope="row">eight tabs open</th><td>49.9&nbsp;MB total PSS, including the eight bash processes</td></tr>
+        <tr><th scope="row">for scale</th><td>VS Code&rsquo;s main process alone: 115&nbsp;MB, same machine</td></tr>
+        <tr><th scope="row">status dot</th><td>0.0&ndash;0.2% of a core, against ~5% for a spinner</td></tr>
+        <tr><th scope="row">shell notification</th><td>12&nbsp;&micro;s per command, against ~246&nbsp;&micro;s forked</td></tr>
       </tbody></table></div>
     </div>
-  </section>
 
-  <section class="section" style="padding-top:0;">
-    <div class="wrap split">
-      <h2>What I&rsquo;d change</h2>
-      <div class="prose"><p class="todo-note">[A limitation and how you&rsquo;d address it.]</p></div>
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cat simple-multi-terminal/what-id-change.md</p>
+    <div class="out prose">
+      <p class="todo-note">[A limitation and how you&rsquo;d address it.]</p>
     </div>
-  </section>
-</main>
-<footer class="next-foot">
-  <div class="wrap">
-    <a class="next" href="todo.html">Next: todo &rarr;</a>
-    <a href="mailto:ledanhphuong@gmail.com" style="font-size:16px;font-weight:500;">ledanhphuong@gmail.com</a>
-  </div>
-</footer>
+
+    <p class="sep" aria-hidden="true">────────────────────────────────────────────────────────────────────────────────────────────────────────────────</p>
+
+    <p class="cmd">cd ../todo</p>
+    <div class="out nav-next">
+      <p><a href="todo.html">next: todo &rarr;</a></p>
+      <p style="margin-top:10px;"><a href="mailto:ledanhphuong@gmail.com">ledanhphuong@gmail.com</a></p>
+    </div>
+
+    <p class="prompt-end" aria-hidden="true">$<span class="cursor"></span></p>
+
+  </main>
+</div>
+
 </body>
 </html>
