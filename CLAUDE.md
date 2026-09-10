@@ -12,7 +12,7 @@ in a browser and it works. Published on GitHub Pages at
 ```
 index.html          front page: hero, measured numbers, work list, experience
 style.css           the entire design system, light + dark
-projects/*.html     one page per project (lst, uictl, claude-tele-bot, smt, todo)
+projects/*.html     one page per project (lst, uictl, smt, todo)
 img/*.png           screenshots, cropped and quantised
 404.html            served by Pages on a bad link
 .nojekyll           stops Pages running Jekyll over the files

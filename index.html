@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AkiraVD — Backend &amp; systems engineer</title>
-<meta name="description" content="Backend and systems engineer working in Go, Python and TypeScript. I build small, fast developer tools and publish the measurements.">
+<meta name="description" content="Backend and systems engineer working in Go, Python and TypeScript. I build small, fast developer tools and measure them.">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AkiraVD — Backend &amp; systems engineer">
-<meta property="og:description" content="I build small, fast developer tools — and I publish the numbers.">
+<meta property="og:description" content="I build small, fast developer tools and measure them.">
 <meta property="og:url" content="https://akiravd.github.io/">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231c1917'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23faf8f4' text-anchor='middle'>A</text></svg>">
@@ -40,7 +40,7 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <h1>I build small, fast developer tools &mdash; and I <em>publish the numbers</em>.</h1>
+        <h1>I build <em>small, fast</em> developer tools.</h1>
         <p class="lede">Go, Python and TypeScript. Every performance claim below is a measurement you can re-run, not an adjective.</p>
         <div class="cta-row">
           <a class="btn btn-solid" href="#work">See the work
@@ -55,8 +55,8 @@
       <aside class="card">
         <h2>Currently</h2>
         <dl>
-          <div><dt>Open to</dt><dd>[BACKEND / PLATFORM ROLES]</dd></div>
-          <div><dt>Based in</dt><dd>[YOUR CITY] &middot; [REMOTE?]</dd></div>
+          <div><dt>Open to</dt><dd>Fullstack / Backend</dd></div>
+          <div><dt>Based in</dt><dd>Ho Chi Minh City</dd></div>
           <div><dt>Stack</dt><dd>Go &middot; Python &middot; TypeScript</dd></div>
           <div><dt>Also</dt><dd>Linux internals, Docker, gRPC, GTK</dd></div>
         </dl>
@@ -72,7 +72,7 @@
       </div>
       <div class="stat">
         <b>39 <span>game titles</span></b>
-        <p>Live on one shared Node.js game framework &mdash; slots, fish shooting, card and casual multiplayer.</p>
+        <p>Live on one shared Node.js game framework &mdash; realtime multiplayer, one clustered process per title.</p>
       </div>
       <div class="stat">
         <b>&micro;s <span>not ms</span></b>
@@ -85,7 +85,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2>Selected work</h2>
-        <span class="aside">Five projects &middot; all open source</span>
+        <span class="aside">Four projects &middot; all open source</span>
       </div>
 
       <div class="work">
@@ -110,18 +110,8 @@
           <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
         </a>
 
-        <a class="work-item" href="projects/claude-tele-bot.html">
-          <span class="num">03</span>
-          <span class="head"><span class="title">claude-tele-bot</span><span class="meta">TypeScript</span></span>
-          <span class="body">
-            <p>A coding agent run from Telegram. Sandboxed per chat in Docker, with the permission checks enforced outside the sandbox.</p>
-            <ul class="tags"><li>Docker</li><li>Stream parsing</li><li>Threat modelling</li></ul>
-          </span>
-          <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
-        </a>
-
         <a class="work-item" href="projects/smt.html">
-          <span class="num">04</span>
+          <span class="num">03</span>
           <span class="head"><span class="title">simple-multi-terminal</span><span class="meta">Python &middot; GTK4</span></span>
           <span class="body">
             <p>A terminal that does five things and refuses the rest &mdash; in 49.9&nbsp;MB with eight tabs running.</p>
@@ -131,7 +121,7 @@
         </a>
 
         <a class="work-item" href="projects/todo.html">
-          <span class="num">05</span>
+          <span class="num">04</span>
           <span class="head"><span class="title">todo</span><span class="meta">Go &middot; Fyne</span></span>
           <span class="body">
             <p>Unfinished work rolls forward to today, and the day it came from keeps an honest record. So it can tell you a task is on its fourth day.</p>
@@ -151,8 +141,8 @@
         <div class="roles">
           <article class="role">
             <div>
-              <h3>[JOB TITLE] &middot; [COMPANY]</h3>
-              <p>Realtime backends for online casino and arcade games &mdash; slots, fish shooting, card games and casual multiplayer &mdash; on a shared Node.js framework serving raw TCP, WebSocket and WSS from one clustered process per game.</p>
+              <h3>Backend Developer</h3>
+              <p>Realtime multiplayer game backends on a shared Node.js framework, serving raw TCP, WebSocket and WSS from one clustered process per title.</p>
               <ul class="role-points">
                 <li>Cut a hot-path lookup from milliseconds to tens of microseconds by moving read-only reference data out of the database into a local embedded store &mdash; generated from the live schema, so it is rebuilt rather than maintained by hand.</li>
                 <li>Built simulation tooling that validates game maths over millions of runs and reports automatically, so releases are signed off on evidence rather than intuition.</li>
@@ -160,7 +150,13 @@
                 <li>Held a production runtime pinned to Node 12 for years, with the dependency tree documented well enough that no upgrade has silently broken a live server.</li>
               </ul>
             </div>
-            <time>[2022 &ndash; now]</time>
+          </article>
+
+          <article class="role">
+            <div>
+              <h3>Web Developer</h3>
+              <p>Earlier work: built and maintained a school&rsquo;s public website and its campaign content.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -173,14 +169,10 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <h2>Hiring for something that has to be fast and correct?</h2>
-        <blockquote class="quote" style="margin-top:24px;">&ldquo;Everything below was measured on the machine this was developed on. Nothing here is estimated.&rdquo;</blockquote>
+        <h2>Looking for someone to build this kind of thing?</h2>
       </div>
       <ul class="links">
-        <li><a href="mailto:[YOUR EMAIL]">[YOUR EMAIL]</a></li>
-        <li><a href="https://github.com/AkiraVD" rel="me noopener">github.com/AkiraVD</a></li>
-        <li><a href="[YOUR LINKEDIN URL]" rel="me noopener">[LINKEDIN]</a></li>
-        <li class="quiet"><a href="[CV.pdf]">Download CV (PDF)</a></li>
+        <li><a href="mailto:ledanhphuong@gmail.com">ledanhphuong@gmail.com</a></li>
       </ul>
     </div>
     <div class="colophon">

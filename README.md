@@ -26,14 +26,11 @@ grep -rn '\[[A-Z]' --include='*.html' index.html projects/
 | `index.html` hero card | City, remote/hybrid, the roles you want |
 | `index.html` experience | Two real jobs: title, company, dates, one measurable outcome each |
 | `index.html` footer | Email, LinkedIn URL, CV PDF |
-| every `projects/*.html` | The "What I'd change" paragraph, and the mailto in the footer |
-| `projects/claude-tele-bot.html` | A repo link, or reword the card to say it's private |
+| every `projects/*.html` | The "What I'd change" paragraph |
 
-Two things worth doing beyond filling blanks:
+One thing worth doing beyond filling blanks:
 
-1. **Push `claude-tele-bot` to GitHub**, or drop it from the front page. Right now
-   it is the only project a reader cannot go and check.
-2. **Write the "What I'd change" sections yourself.** They are the part of this
+1. **Write the "What I'd change" sections yourself.** They are the part of this
    site an interviewer will actually quote back at you, and they have to be true.
 
 ## Publishing
