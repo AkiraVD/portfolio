@@ -102,14 +102,56 @@ python3 -m http.server 8000     # then open http://localhost:8000
 Check it at phone width before pushing — the layout collapses to one column at
 820px, and tightens again at 520px. A headless browser renders a page to PNG at
 any width without touching a live browser session, which is the quickest way to
-actually look. There is no Chrome on this machine; Brave is a flatpak, and needs
-`--filesystem` to reach the output path:
+actually look. Which browser that is depends on the machine (see below); this picks
+whichever is installed:
 
 ```sh
-flatpak run --filesystem=/tmp com.brave.Browser --headless --disable-gpu \
-  --hide-scrollbars --window-size=400,2600 \
-  --screenshot=/tmp/phone.png http://127.0.0.1:8000/
+shot() {  # usage: shot <width> <url> <out.png>
+  if command -v google-chrome >/dev/null; then
+    google-chrome --headless --disable-gpu --hide-scrollbars \
+      --window-size="$1",2600 --screenshot="$3" "$2"
+  else  # Brave flatpak is sandboxed: it can only write where --filesystem allows
+    flatpak run --filesystem=/tmp com.brave.Browser --headless --disable-gpu \
+      --hide-scrollbars --window-size="$1",2600 --screenshot="$3" "$2"
+  fi
+}
+shot 400 http://127.0.0.1:8000/ /tmp/phone.png
 ```
+
+Keep screenshot output under `/tmp` so the same command works on both machines.
+
+## Machines
+
+The site itself needs almost nothing: **git, `gh` (logged in as AkiraVD), Python 3
+for the preview server, and any Chromium-family browser** for headless screenshots.
+No Node, no package manager — nothing here should ever need one.
+
+The user works on this repo from more than one PC. **`git fetch` before editing** —
+the other machine may have pushed.
+
+| | Main PC (`phuongld-B660M-DS3H-AX-DDR4`) | Second PC |
+|---|---|---|
+| OS | Ubuntu 24.04.5 LTS, kernel 7.0 | not yet recorded |
+| Desktop | GNOME 46, **Wayland** | not yet recorded |
+| Python | 3.12.3 | not yet recorded |
+| Headless browser | `google-chrome` 153 | Brave, flatpak `com.brave.Browser` (no Chrome) |
+| git / gh | 2.43.0 / 2.98.0 | not yet recorded |
+| Node | default is **v12** (pinned for unrelated work); v18/v22 via fnm | not yet recorded |
+
+Machine-specific traps:
+
+- **Wayland (main PC):** screenshotting the live desktop can't target a specific
+  window — other apps end up on top. Use the headless `shot` above instead.
+- **Node v12 default (main PC):** if any script ever does need Node, v12 fails on
+  modern syntax with `SyntaxError: Unexpected token '?'`. Call
+  `~/.local/share/fnm/node-versions/v22.23.1/installation/bin/node` explicitly
+  rather than changing the default.
+- **Brave flatpak (second PC):** without `--filesystem=/tmp` the screenshot fails
+  silently or with a write error, because the sandbox can't see the output path.
+
+When working on a machine not in this table, or one whose column says "not yet
+recorded", fill in its column (`uname -r`, `python3 --version`, `git --version`,
+`gh --version`, which browser exists) and commit it with the change.
 
 ## Deploying
 
